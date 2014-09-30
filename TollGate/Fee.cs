@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace TollGate
 {
-    public class Car : IVehicle
+    public class Fee
     {
-        public string getType()
-        {
-            throw new NotImplementedException();
-        }
+        public int Cost;
     }
 }

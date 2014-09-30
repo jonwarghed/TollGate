@@ -5,6 +5,14 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TollGate", "TollGate\TollGate.csproj", "{6F58710D-0F3B-4E6A-9D29-9771FBB7AF65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TollGate.Specs", "TollGate.Specs\TollGate.Specs.csproj", "{FF1C2699-AF24-4E24-BADF-781D0FE7AB15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TollGate.DTO", "TollGate.DTO\TollGate.DTO.csproj", "{6A3FD4B0-5F68-4495-A76F-8D6892CAE1BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TollGateFeeLoader", "TollGateFeeLoader\TollGateFeeLoader.csproj", "{14C35D9F-796E-420A-8FFC-D3BF7CAEE310}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TollGateFeeLoader.Specs", "TollGateFeeLoader.Specs\TollGateFeeLoader.Specs.csproj", "{13EFA4EC-E34E-4851-B2B2-E00F9F2A4B8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{6F58710D-0F3B-4E6A-9D29-9771FBB7AF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F58710D-0F3B-4E6A-9D29-9771FBB7AF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F58710D-0F3B-4E6A-9D29-9771FBB7AF65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1C2699-AF24-4E24-BADF-781D0FE7AB15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1C2699-AF24-4E24-BADF-781D0FE7AB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1C2699-AF24-4E24-BADF-781D0FE7AB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1C2699-AF24-4E24-BADF-781D0FE7AB15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A3FD4B0-5F68-4495-A76F-8D6892CAE1BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3FD4B0-5F68-4495-A76F-8D6892CAE1BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3FD4B0-5F68-4495-A76F-8D6892CAE1BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3FD4B0-5F68-4495-A76F-8D6892CAE1BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C35D9F-796E-420A-8FFC-D3BF7CAEE310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C35D9F-796E-420A-8FFC-D3BF7CAEE310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C35D9F-796E-420A-8FFC-D3BF7CAEE310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C35D9F-796E-420A-8FFC-D3BF7CAEE310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13EFA4EC-E34E-4851-B2B2-E00F9F2A4B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13EFA4EC-E34E-4851-B2B2-E00F9F2A4B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13EFA4EC-E34E-4851-B2B2-E00F9F2A4B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13EFA4EC-E34E-4851-B2B2-E00F9F2A4B8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

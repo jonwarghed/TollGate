@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace TollGate
 {
-    public class Motorcycle: IVehicle
+    public class Car : IVehicle
     {
         public string getType()
         {
-            throw new NotImplementedException();
+            return "Car";
         }
     }
 }
