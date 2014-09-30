@@ -1,0 +1,5 @@
+c:\users\jowa\documents\visual studio 2013\Projects\TollGate\TollGate\obj\Debug\TollGate.csprojResolveAssemblyReference.cache
+c:\users\jowa\documents\visual studio 2013\Projects\TollGate\TollGate\bin\Debug\TollGate.dll
+c:\users\jowa\documents\visual studio 2013\Projects\TollGate\TollGate\bin\Debug\TollGate.pdb
+c:\users\jowa\documents\visual studio 2013\Projects\TollGate\TollGate\obj\Debug\TollGate.dll
+c:\users\jowa\documents\visual studio 2013\Projects\TollGate\TollGate\obj\Debug\TollGate.pdb
