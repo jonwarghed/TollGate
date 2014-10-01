@@ -45,6 +45,7 @@
     <Compile Include="DTO\FeeRules\TollWeek.cs" />
     <Compile Include="DTO\FeeRules\TollYear.cs" />
     <Compile Include="DTO\Vehicles\Car.cs" />
+    <Compile Include="DTO\Vehicles\ITollFreVehicle.cs" />
     <Compile Include="DTO\Vehicles\IVehicle.cs" />
     <Compile Include="DTO\Vehicles\Motorcycle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

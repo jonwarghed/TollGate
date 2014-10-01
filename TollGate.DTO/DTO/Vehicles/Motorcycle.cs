@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TollGate.DTO.DTO.Vehicles;
 
 namespace TollGate
 {
-    public class Motorcycle: IVehicle
+    public class Motorcycle: ITollFreeVehicle, IVehicle
     {
-        public string getType()
+        public new string getType()
         {
-            return "Motorcycle";
+            return "MOTORCYCLE";
         }
     }
 }

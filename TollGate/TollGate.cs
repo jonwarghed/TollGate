@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TollGate.DTO.DTO.Vehicles;
 using TollGate.DTO.FeeRules;
 using TollGateFeeLoader;
 
@@ -58,6 +59,7 @@ namespace TollGate
 
         private bool isTollFreeVehicle(IVehicle vehicle)
         {
+            
             if (vehicle == null) return false;
             String vehicleType = vehicle.getType();
             //Why are we using an enum to gather information on what kind of car it is?
@@ -96,6 +98,16 @@ namespace TollGate
         }
     }
 
+    enum TollFreeVehicles
+    {
+        MOTORBIKE,
+        TRACTOR,
+        EMERGENCY,
+        DIPLOMAT,
+        FOREIGN,
+        MILITARY
+    };
+
     public class EventDrivenTollGate : TollGate, IFeeCalculator, ILoaderEnabled
     {
         protected List<TollYear> tolls;
@@ -107,14 +119,21 @@ namespace TollGate
         public virtual Fee CalculateFee(IVehicle vehicle, List<PassedGateEvent> passedGate)
         {
             var state = CostCalculator.Zero();
+            if (vehicle is ITollFreeVehicle)
+                return new Fee() { Cost = 0 };
             foreach(var passing in passedGate)
             {
-                Handle(state,passing);
+                state = Handle(state,passing);
             }
             return new Fee()
             {
                 Cost = state.currentFee
             };
+        }
+
+        public virtual async Task<Fee> CalculateFeeAsync(IVehicle vehicle, List<PassedGateEvent> passedGate)
+        {
+            return CalculateFee(vehicle, passedGate);
         }
 
         /// <summary>
@@ -137,7 +156,7 @@ namespace TollGate
             var fee = GetTollFee(gateEvent);
             if(fee != null)
             {
-                currentState.currentFee = Math.Max(currentState.currentFee + fee.Toll, 60);
+                currentState.currentFee = Math.Min(currentState.currentFee + fee.Toll, 60);
                 currentState.lastEventThatGeneratedCost = gateEvent.Timestamp;
                 return currentState;
             }
@@ -150,7 +169,7 @@ namespace TollGate
             if (!currentState.lastEventThatGeneratedCost.HasValue)
                 return false;
             var difference = passedGate.Timestamp - currentState.lastEventThatGeneratedCost.Value;
-            if (difference.Minutes < 60)
+            if (difference.TotalMinutes < 60)
                 return true;
             return false;
         }
@@ -193,14 +212,6 @@ namespace TollGate
 
     }
     
-    enum TollFreeVehicles
-    {
-        MOTORBIKE,
-        TRACTOR,
-        EMERGENCY,
-        DIPLOMAT,
-        FOREIGN,
-        MILITARY
-    };
+   
     
 }

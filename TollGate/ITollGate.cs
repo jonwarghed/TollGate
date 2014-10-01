@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace TollGate
 {
@@ -25,6 +26,7 @@ namespace TollGate
     public interface IFeeCalculator
     {
         Fee CalculateFee(IVehicle vehicle, List<PassedGateEvent> passedGate);
+        Task<Fee> CalculateFeeAsync(IVehicle vehicle, List<PassedGateEvent> passedGate);
     }
 
     public interface ILoaderEnabled
